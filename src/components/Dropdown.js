@@ -12,12 +12,10 @@ const Dropdown = props => {
         switch (typeof content) {
             case "string":
                 return <p>{content}</p>
-                break;
             case "object":
                 return <ul>
                     {content.map(e => <li>{e}</li>)}
                 </ul>
-                break;
             default: console.log('Unpexpected input')
                 break;
         }

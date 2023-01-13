@@ -8,11 +8,22 @@
 }
 
 .header a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 3rem;
     text-decoration: none;
 }
 
 .header a:hover {
     text-decoration: underline
+}
+
+@media screen and (max-width: 768px) {
+
+    .header img {
+        width: 110px;
+    }
+
+    .header a {
+        font-size: 1.2rem;
+    }
 }

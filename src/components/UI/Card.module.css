@@ -1,0 +1,37 @@
+.card {
+    width: 28%;
+    margin: .5rem 0;
+}
+
+.card:hover img {
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
+.card div {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 110%;
+    filter: brightness(85%);
+}
+
+.card span {
+    position: absolute;
+    color: white;
+    font-size: .9rem;
+    width: 60%;
+    left: 5%;
+    bottom: 5%;
+}
+
+.default {
+    background: #FF6060;
+}
