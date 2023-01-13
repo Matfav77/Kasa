@@ -5,8 +5,11 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Logement from './pages/Logement';
+import data from './logements.json';
 
 const App = props => {
+
+
   return (<main>
     <Routes>
       <Route path='/' element={<Home />} />
