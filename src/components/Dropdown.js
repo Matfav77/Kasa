@@ -2,12 +2,30 @@
 import { useState } from 'react';
 import styles from './Dropdown.module.css'
 
-const Dropdown = props => {
 
+const Dropdown = props => {
     const [collapsed, setCollapsed] = useState(true);
 
+    const { content } = props;
+
+    const contentFilter = () => {
+        switch (typeof content) {
+            case "string":
+                return <p>{content}</p>
+                break;
+            case "object":
+                return <ul>
+                    {content.map(e => <li>{e}</li>)}
+                </ul>
+                break;
+            default: console.log('Unpexpected input')
+                break;
+        }
+
+    }
+
     const chevronClasses = `fa-solid fa-chevron-up ${!collapsed ? styles['chevron-down'] : ''}`;
-    const txtClasses = `${styles['dropdown__txt']} ${!collapsed ? styles['dropdown__txt-show'] : ''}`
+    const txtClasses = `${styles['dropdown__content']} ${!collapsed ? styles['dropdown__content-show'] : ''}`
 
     const collapseHandler = () => {
         setCollapsed(prevState => !prevState);
@@ -19,7 +37,7 @@ const Dropdown = props => {
             <i className={chevronClasses}></i>
         </div>
         <div className={txtClasses}>
-            <p>{props.txt}</p>
+            {contentFilter()}
         </div>
     </div>
 }

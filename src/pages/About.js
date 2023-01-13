@@ -1,16 +1,20 @@
 
 import Dropdown from "../components/Dropdown";
 import Banner from "../components/UI/Banner";
-import aboutBanner from '../images/aboutBanner.jpg'
+import aboutBanner from '../images/aboutBanner.jpg';
+import dropdownInfo from '../data/dropdownInfo.json';
+import styles from './About.module.css'
+
 
 const About = props => {
 
     return <>
         <Banner height={'220px'} src={aboutBanner} />
-        <Dropdown title='Fiability' txt='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.' />
-        <Dropdown title='Fiability' txt='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.' />
-        <Dropdown title='Fiability' txt='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.' />
-        <Dropdown title='Fiability' txt='La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.' />
+        <section className={styles.values}>
+            {dropdownInfo.map(e => {
+                return <Dropdown title={e.title} content={e.content} key={e.title} />
+            })}
+        </section>
     </>
 }
 

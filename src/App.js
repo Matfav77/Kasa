@@ -5,7 +5,7 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Logement from './pages/Logement';
-import data from './logements.json';
+import data from './data/logements.json';
 
 const App = props => {
 
@@ -14,7 +14,7 @@ const App = props => {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/contact' element={<Contact />} />
-      <Route path='/logement/:id' element={<Logement />} />
+      <Route path='/logement/:id' element={<Logement />} errorElement={<NotFound />} />
       <Route path='/about' element={<About />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
