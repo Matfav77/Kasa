@@ -35,3 +35,13 @@
 .default {
     background: #FF6060;
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    .card span {
+        font-size: 1.2rem;
+    }
+}
