@@ -1,6 +1,43 @@
 .mainframe {
     width: 100%;
     height: 415px;
-    border: 5px solid black;
     border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    background-color: transparent;
+}
+
+.controls {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.controls i {
+    font-size: 4rem;
+}
+
+.controls i:hover {
+    cursor: pointer;
+}
+
+.controls span {
+    align-self: flex-end;
+    font-size: 2rem;
+}
+
+.slider {
+    width: 100%;
+    height: 415px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
 }
