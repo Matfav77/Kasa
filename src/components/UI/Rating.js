@@ -9,8 +9,8 @@ const Rating = props => {
 
     return (
         <p>
-            {ratingSignature.map(e => {
-                return e ? <i className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>;
+            {ratingSignature.map((e, index) => {
+                return e ? <i className="fa-solid fa-star" key={index}></i> : <i className="fa-regular fa-star" key={index}></i>;
             })}
         </p>
     )

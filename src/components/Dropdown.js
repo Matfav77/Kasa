@@ -14,7 +14,7 @@ const Dropdown = props => {
                 return <p>{content}</p>
             case "object":
                 return <ul>
-                    {content.map(e => <li>{e}</li>)}
+                    {content.map((e, index) => <li key={index}>{e}</li>)}
                 </ul>
             default: console.log('Unpexpected input')
                 break;

@@ -1,6 +1,4 @@
-import { useParams } from "react-router-dom";
-
-import { getRental } from "../services/apiCalls";
+import { useLoaderData } from "react-router-dom";
 
 import SlideShow from '../components/UI/SlideShow';
 import Tags from "../components/UI/Tags";
@@ -9,14 +7,20 @@ import Dropdown from "../components/Dropdown";
 
 import styles from './Logement.module.css';
 
+import { getRental } from '../services/apiCalls';
 
+
+export const rentalLoader = (id) => {
+    const foundRental = getRental(id);
+    if (!foundRental) throw new Response("Not Found", { status: 404 });
+    return foundRental;
+}
 
 
 const Logement = props => {
 
-    const { id } = useParams();
-    const rentalData = getRental(id);
 
+    const rentalData = useLoaderData();
 
     return <>
         <SlideShow pictures={rentalData.pictures} />

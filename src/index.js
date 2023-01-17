@@ -9,10 +9,6 @@ import Footer from './pages/partials/Footer'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <App />
-      <Footer />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );

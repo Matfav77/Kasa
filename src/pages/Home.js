@@ -16,7 +16,6 @@ const Home = props => {
             {allRentals.map(e => {
                 return <Card src={e.cover} alt={e.title} key={e.id} id={e.id} title={e.title} />
             })}
-            <Card />
         </section>
     </>
 }
