@@ -1,4 +1,7 @@
 .values {
-    margin: auto;
+    margin: 1rem auto;
     width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
 }

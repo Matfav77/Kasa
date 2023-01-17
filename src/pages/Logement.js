@@ -33,7 +33,7 @@ const Logement = props => {
             <div className={styles['rental-info__host']}>
                 <div>
                     <span>{rentalData.host.name}</span>
-                    <img src={rentalData.host.picture}></img>
+                    <img src={rentalData.host.picture} alt={`Portrait of the host: ${rentalData.host.name}`}></img>
                 </div>
                 <Rating rating={rentalData.rating} />
             </div>

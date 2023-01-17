@@ -5,12 +5,17 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     padding-top: 1rem;
-
+    row-gap: 1.5rem;
 }
 
+.rental-info__summary {
+    width: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
 
 .rental-info__summary h2 {
-    display: inline-block;
     width: fit-content;
     margin: 0;
     font-weight: 400;
@@ -60,7 +65,20 @@
 
 @media screen and (max-width:768px) {
 
-    .rental-info__description {
+    .rental-info {
         flex-flow: column nowrap;
+        row-gap: 1rem;
     }
+
+    .rental-info__host {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .rental-info__host p {
+        align-self: inherit;
+        order: -1;
+    }
+
+
 }
