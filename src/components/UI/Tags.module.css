@@ -13,3 +13,9 @@
     color: white;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .tagsContainer__tag {
+        font-size: .7rem;
+    }
+}

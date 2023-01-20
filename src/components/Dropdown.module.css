@@ -50,6 +50,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .dropdown__title {
+        font-size: 1rem;
+    }
+
     .dropdown__content {
         font-size: 1rem;
     }

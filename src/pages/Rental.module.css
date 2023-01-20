@@ -19,7 +19,7 @@
     width: fit-content;
     margin: 0;
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 
 .rental-info__summary p {
@@ -64,6 +64,14 @@
 }
 
 @media screen and (max-width:768px) {
+
+    .rental-info__summary h2 {
+        font-size: 1.3rem;
+    }
+
+    .rental-info__summary p {
+        font-size: .8rem;
+    }
 
     .rental-info {
         flex-flow: column nowrap;

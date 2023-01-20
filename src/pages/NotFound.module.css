@@ -6,20 +6,24 @@
     align-items: center;
 }
 
-.not-found h1 {
+.not-found span {
     font-size: 15rem;
     font-weight: bold;
-    margin: 5rem 0 1rem;
+    margin: 4rem 0 1rem;
 }
 
 .not-found p {
     font-size: 2rem;
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
     text-align: center;
 }
 
+.not-found a {
+    margin-bottom: 4rem;
+}
+
 @media screen and (max-width:768px) {
-    .not-found h1 {
+    .not-found span {
         font-size: 6rem;
     }
 

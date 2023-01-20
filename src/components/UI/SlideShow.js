@@ -29,7 +29,7 @@ const SlideShow = props => {
         <div className={styles.slider}>
             {pictures.map((e, index) => <div key={index}
                 className={`${styles.slide} ${currentIndex === index ? styles.active : ''}`}>
-                <img src={pictures[index]} alt='Current rental'></img>
+                <img src={pictures[index]} alt='View of the current rental'></img>
             </div>)}
         </div>
     </section>
