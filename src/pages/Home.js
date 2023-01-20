@@ -1,3 +1,5 @@
+import { useLoaderData } from 'react-router-dom';
+
 import Banner from '../components/UI/Banner';
 import Card from '../components/UI/Card';
 
@@ -8,7 +10,7 @@ import styles from './Home.module.css';
 
 const Home = props => {
 
-    const allRentals = getAllRentals();
+    const allRentals = useLoaderData();
 
     return <>
         <Banner height={'220px'} src={homeBanner} alt={'Image of a rainy coastline'} txt={'Chez vous, partout et ailleurs'} />
@@ -21,3 +23,7 @@ const Home = props => {
 }
 
 export default Home;
+
+export const homeLoader = () => {
+    return getAllRentals();
+}

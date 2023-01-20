@@ -5,7 +5,7 @@ import Tags from "../components/UI/Tags";
 import Rating from "../components/UI/Rating";
 import Dropdown from "../components/Dropdown";
 
-import styles from './Logement.module.css';
+import styles from './Rental.module.css';
 
 import { getRental } from '../services/apiCalls';
 
@@ -17,7 +17,7 @@ export const rentalLoader = (id) => {
 }
 
 
-const Logement = props => {
+const Rental = props => {
 
 
     const rentalData = useLoaderData();
@@ -44,4 +44,4 @@ const Logement = props => {
         </section>
     </>
 }
-export default Logement
+export default Rental;

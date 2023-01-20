@@ -2,10 +2,6 @@ import { useState } from 'react';
 
 import styles from './SlideShow.module.css'
 
-const slideReducer = (state, action) => {
-
-}
-
 const SlideShow = props => {
 
     const pictures = props.pictures;
@@ -23,16 +19,19 @@ const SlideShow = props => {
         })
     }
 
-
     const controls = pictures.length > 1 ? <div className={styles.controls}>
         <i className="fa-solid fa-chevron-left" onClick={showPreviousSlide}></i>
         <span>{currentIndex + 1}/{pictures.length}</span>
         <i className="fa-solid fa-chevron-right" onClick={showNextSlide}></i></div> : '';
 
-
     return <section className={styles.mainframe}>
         {controls}
-        <div className={styles.slider} style={{ backgroundImage: `url(${pictures[currentIndex]})` }}></div>
+        <div className={styles.slider}>
+            {pictures.map((e, index) => <div key={index}
+                className={`${styles.slide} ${currentIndex === index ? styles.active : ''}`}>
+                <img src={pictures[index]} alt='Current rental'></img>
+            </div>)}
+        </div>
     </section>
 }
 

@@ -1,16 +1,16 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import BoilerPlate from "./pages/BoilerPlate";
-import Home from './pages/Home';
+import Home, { homeLoader } from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import Logement, { rentalLoader } from './pages/Logement';
+import Rental, { rentalLoader } from './pages/Rental';
 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path='/' element={<BoilerPlate />}>
-            <Route index element={<Home />} />
-            <Route path='logements/:id' element={<Logement />}
+        <Route path='/' element={<BoilerPlate />} >
+            <Route index element={<Home />} loader={homeLoader} />
+            <Route path='logements/:id' element={<Rental />}
                 loader={({ params }) => { return rentalLoader(params.id) }}
                 errorElement={<NotFound />} />
             <Route path='about' element={<About />} />
