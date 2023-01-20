@@ -8,3 +8,9 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 768px) {
+    .rentals-display {
+        background-color: white;
+    }
+}

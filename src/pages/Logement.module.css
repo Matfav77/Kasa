@@ -80,5 +80,9 @@
         order: -1;
     }
 
+    .rental-info__description {
+        flex-flow: column nowrap;
+        row-gap: 1rem;
+    }
 
 }

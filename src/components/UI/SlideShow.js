@@ -23,10 +23,12 @@ const SlideShow = props => {
         })
     }
 
+
     const controls = pictures.length > 1 ? <div className={styles.controls}>
         <i className="fa-solid fa-chevron-left" onClick={showPreviousSlide}></i>
         <span>{currentIndex + 1}/{pictures.length}</span>
         <i className="fa-solid fa-chevron-right" onClick={showNextSlide}></i></div> : '';
+
 
     return <section className={styles.mainframe}>
         {controls}
