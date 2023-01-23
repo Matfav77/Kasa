@@ -15,7 +15,7 @@ const SlideShow = props => {
     const showPreviousSlide = () => {
         setCurrentIndex(prevIndex => {
             if (prevIndex === 0) return pictures.length - 1;
-            return (prevIndex - 1) % pictures.length;
+            return (prevIndex - 1);
         })
     }
 
